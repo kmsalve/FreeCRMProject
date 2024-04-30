@@ -37,38 +37,23 @@ public class HomePageTest extends TestBase
 		//homePage = loginPage.login(prop.getProperty("username"),prop.getProperty("password"));
 	}
 	
-	@Test(priority=1)
+	//@Test(priority=1)
 	public void verifyHomePageTitleTest()
 	{
 		String HomePageTitle = homePage.verifyHomePageTitle();
-		//try
-		//{
+		
 		AssertJUnit.assertEquals(HomePageTitle, "Cogmento CRM","Home Page Title Not matched");
-		//}
-		/*
-		catch(java.lang.AssertionError ee) 
-		{
-   		 try {
-			TestUtil.takeScreenshotAtEndofTest(driver);
-		} 
-   		 catch (IOException e) 
-   		 {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-   		*/
-		//}
 		
 	}
 	
-	//@Test(priority=2)
+	@Test(priority=2)
 	public void verifyUserNameTest()
 	{
 		
 		AssertJUnit.assertTrue(homePage.verifyCorrectUserName());
 	}
 	
-	// @Test(priority=3)
+	 @Test(priority=3)
 	public void verifyConactsLinkPageTest()
 	{
 		contactsPage = homePage.clickOnContactsLink();
